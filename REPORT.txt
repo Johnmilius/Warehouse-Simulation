@@ -1,0 +1,53 @@
+ISSUE 1: The way orders are processed to be most effecient is to catagorize them into three sections. MIXED / SINGLES / WHOLESALES.
+    - SINGLES: E.g. 100 people order the same single blanket. 
+        The current System finds Locations, UNITS (new data column), that have bulk availible and then MARKS, (new data column introduced), creates a BATCH sheet so that the picker can grab from a small amount of locations to promote efficiency.
+    - MIXED (THE ISSUE): Half of the other orders are orders with 1-6 different blankets. 
+        The current System throws these orders into BATCH, (new data column), sheets which consist of various orders that have little correlation with each other. 
+        Effeciency is slown down due to Pickers grabbing from multiple locations for the same type of blanket, and the orders themsevles have no sorting / correlation with eachother.
+    - WHOLESALES: Orders with large blanket quantities. E.g. 50 one type of blanket and 50 of another. 
+        The System handles these Seperatly. Outliers.
+
+SOLUTION IN PROGRESS: Create a better Batch sheet Generation algorithm that takes MIXED batches better agregating. 
+HOW TO IMPLEMENT: Need to create new tables to handle batch sheets, Orders, and unit ids
+
+
+
+
+
+
+ISSUE 2:Problem Log Entry
+Date: 11/14/2025
+Problem: Inefficient Mixed-Order Batch Picking
+Issue Observed:
+Warehouse uses two picking strategies:
+
+SINGLES batches: Efficient - 400 identical orders consolidated to bulk locations
+MIXED batches: Inefficient - Orders with multiple different products aren't optimally grouped, causing pickers to visit excessive locations even when orders share common products
+
+Example:
+Order A: 1 Blue + 1 Grey + 1 Black
+Order B: 1 Cream + 1 White + 1 Blue
+Current system: Treats these separately
+Better approach: Group these orders, pick 2 Blue blankets from one location
+Root Cause:
+Batch creation logic doesn't analyze order similarities before assignment. Orders are grouped arbitrarily rather than by shared products or location proximity.
+Proposed Solution:
+
+Add quantity_marked column to track reserved inventory
+Create orders, order_items, and batch_sheets tables
+Build intelligent batch optimization algorithm that:
+
+Analyzes pending orders for product overlap
+Groups orders with common products together
+Consolidates picks from fewest locations
+Potentially re-marks inventory dynamically before morning batch printing
+
+
+Compare "naive" vs "optimized" batching to measure efficiency gains
+
+Expected Impact:
+Reduce mixed-order picker travel time and location visits by intelligently grouping orders with shared products.
+Skills Applied:
+Operational analysis, identifying algorithmic optimization opportunities, database design for complex workflows..
+
+

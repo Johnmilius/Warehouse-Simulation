@@ -1,0 +1,2 @@
+pdf viewer: https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf
+txt file viewer: https://marketplace.visualstudio.com/items?itemName=xshrim.txt-syntax

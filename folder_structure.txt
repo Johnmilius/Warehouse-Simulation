@@ -1,0 +1,155 @@
+warehouse-simulation/
+├── .env.example                           # Environment variables template
+├── .gitignore                            # Git ignore rules
+├── README.md                             # Project documentation
+├── requirements.txt                      # Python dependencies
+├── setup.py                             # Package setup configuration
+│
+
+├── config/                               # Application configuration
+│   ├── __init__.py
+│   ├── database.py                       # Database connection settings
+│   ├── constants.py                      # Business constants (BLANKET_TYPES, SIZES)
+│   └── settings.py                       # Application settings
+│
+
+├── database/                             # All database-related files
+│   ├── design/                          # Database design files
+│   │   ├── warehouse_model.mwb          # MySQL Workbench model file
+│   │   ├── exports/                     # Exported diagrams and docs
+│   │   │   ├── warehouse_erd.png        # Entity relationship diagram
+│   │   │   ├── warehouse_erd.pdf        # PDF documentation
+│   │   │   └── schema_export.sql        # Auto-generated from MWB
+│   │   └── archive/                     # Historical design versions
+│   │       ├── warehouse_model_v1.mwb
+│   │       └── warehouse_model_v2.mwb
+│   │
+│   ├── migrations/                      # Database version control
+│   │   ├── 001_initial_schema.sql       # Initial database creation
+│   │   ├── 002_add_product_categories.sql # Future: Product categorization
+│   │   ├── 003_add_indexes.sql          # Future: Performance optimization
+│   │   └── 004_add_audit_columns.sql    # Future: Audit trail
+│   │
+│   ├── schema/                          # Current database structure
+│   │   ├── schema.sql                   # Complete database schema
+│   │   ├── views.sql                    # Database views
+│   │   └── stored_procedures.sql        # Stored procedures/functions
+│   │
+│   ├── seeds/                           # Master/reference data
+│   │   ├── seed_warehouse_config.sql    # Your warehouse structure file
+│   │   ├── seed_products.sql            # Product master data
+│   │   ├── seed_locations.sql           # Location hierarchy setup
+│   │   └── seed_business_data.sql       # Business codes, constants
+│   │
+│   ├── queries/                         # Business queries and reports
+│   │   ├── reports/                     # Business reporting queries
+│   │   │   ├── product_locations.sql   # Your current product location query
+│   │   │   ├── inventory_summary.sql   # Warehouse capacity reports
+│   │   │   ├── low_stock_report.sql     # Inventory alerts
+│   │   │   └── warehouse_utilization.sql # Space utilization analysis
+│   │   ├── analytics/                  # Data analysis queries
+│   │   │   ├── product_performance.sql  # Sales/movement analytics
+│   │   │   ├── location_efficiency.sql  # Location usage patterns
+│   │   │   └── inventory_trends.sql     # Historical inventory analysis
+│   │   ├── maintenance/                # Database maintenance queries
+│   │   │   ├── find_orphaned_records.sql # Data integrity checks
+│   │   │   ├── duplicate_check.sql      # Find duplicate data
+│   │   │   └── cleanup_old_data.sql     # Data archival queries
+│   │   └── adhoc/                      # Temporary/investigation queries
+│   │       ├── temp_analysis.sql        # One-off analysis
+│   │       └── investigation_queries.sql # Troubleshooting queries
+│   │
+│   ├── views/                          # Database view definitions
+│   │   ├── vw_product_locations.sql    # Simplified product location view
+│   │   ├── vw_inventory_summary.sql    # Aggregate inventory view
+│   │   └── vw_warehouse_capacity.sql   # Capacity planning view
+│   │
+│   └── verifications/                  # Database verification scripts
+│       ├── schema_verification.sql     # Verify schema integrity
+│       ├── data_verification.sql       # Verify data consistency
+│       └── migration_verification.sql  # Post-migration checks
+│
+
+├── models/                             # Data models/entities
+│   ├── __init__.py
+│   ├── base.py                         # Base model class
+│   ├── product.py                      # Product model
+│   ├── location.py                     # Location model
+│   ├── inventory.py                    # Inventory model
+│   └── warehouse.py                    # Warehouse model
+│
+
+├── repositories/                       # Data access layer
+│   ├── __init__.py
+│   ├── base_repository.py              # Base repository with common methods
+│   ├── product_repository.py           # Product data access
+│   ├── location_repository.py          # Location data access
+│   ├── inventory_repository.py         # Inventory data access
+│   └── warehouse_repository.py         # Warehouse data access
+│
+
+├── services/                          # Business logic layer
+│   ├── __init__.py
+│   ├── inventory_service.py           # Inventory management logic
+│   ├── warehouse_service.py           # Warehouse operations
+│   ├── location_service.py            # Location management
+│   └── reporting_service.py           # Report generation
+│
+
+├── utils/                             # Utility functions
+│   ├── __init__.py
+│   ├── database_utils.py              # Database helper functions
+│   ├── file_utils.py                  # File handling utilities
+│   ├── validation.py                  # Data validation functions
+│   └── formatters.py                  # Data formatting utilities
+│
+
+├── scripts/                           # Executable scripts
+│   ├── __init__.py
+│   ├── db_migrate.py                  # Database migration runner
+│   ├── db_setup.py                    # Complete database setup
+│   ├── run_query.py                   # SQL query runner
+│   ├── fill_warehouse.py              # Your warehouse filling script
+│   ├── sync_mwb.py                    # MySQL Workbench sync tool
+│   ├── export_data.py                 # Data export utilities
+│   └── import_data.py                 # Data import utilities
+│
+
+├── tests/                             # Test suite
+│   ├── __init__.py
+│   ├── conftest.py                    # pytest configuration
+│   ├── test_models/                   # Model tests
+│   │   ├── __init__.py
+│   │   ├── test_product.py
+│   │   └── test_inventory.py
+│   ├── test_repositories/             # Repository tests
+│   │   ├── __init__.py
+│   │   ├── test_product_repository.py
+│   │   └── test_inventory_repository.py
+│   ├── test_services/                 # Service tests
+│   │   ├── __init__.py
+│   │   ├── test_inventory_service.py
+│   │   └── test_warehouse_service.py
+│   └── fixtures/                      # Test data
+│       ├── sample_products.sql
+│       └── sample_locations.sql
+│
+
+├── docs/                              # Project documentation
+│   ├── README.md                      # Detailed project documentation
+│   ├── database_design.md             # Database design documentation
+│   ├── api_reference.md               # Code API documentation
+│   ├── deployment_guide.md            # Deployment instructions
+│   └── user_guide.md                  # End-user documentation
+│
+
+├── logs/                              # Application logs (gitignored)
+│   ├── application.log
+│   ├── database.log
+│   └── errors.log
+│
+
+└── temp/                              # Temporary files (gitignored)
+    ├── exports/
+    ├── backups/
+    └── cache/
