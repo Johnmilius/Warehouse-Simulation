@@ -25,7 +25,6 @@ from config import BLANKET_TYPES, SIZES, DB_CONFIG
 
 # IDEAL keep warehouse locations at 75% full
 
-
 def generate_inventory_count_warehouse_1(connection):
     PRODUCTS = get_all_product_info(connection)
     filled_locations = []
@@ -65,38 +64,6 @@ def insert_many(tablename, data, connection):
 
 
 
-def get_all_empty_locations(connection):
-    cursor = connection.cursor()
-    
-    query = """
-        SELECT l.id
-        FROM location l
-        LEFT JOIN product_location pl ON l.id = pl.fk_product_location_location
-        WHERE pl.id IS NULL
-    """
-    
-    cursor.execute(query)
-    
-    results = cursor.fetchall()
-    
-    cursor.close()
-    return results
-
-def get_all_product_info(connection):
-    cursor = connection.cursor()
-    
-    query = """
-        SELECT p.id as 'id',
-        p.name as 'name',
-        p.sku as 'sku'
-        from product as p;    
-    """
-    cursor.execute(query)
-    results = cursor.fetchall()
-    cursor.close()
-
-    return results
-
 def get_random_product(products):
     product = random.choice(products)
     return product
@@ -114,6 +81,40 @@ def generate_random_product_stock_count(sku):
 
 
 
+
+
+def get_all_empty_locations(connection):
+    cursor = connection.cursor()
+    
+    query = """
+        SELECT l.id
+        FROM location l
+        LEFT JOIN product_location pl ON l.id = pl.fk_product_location_location
+        WHERE pl.id IS NULL
+    """
+    
+    cursor.execute(query)
+    
+    results = cursor.fetchall()
+    
+    cursor.close()
+    return results
+
+
+def get_all_product_info(connection):
+    cursor = connection.cursor()
+    
+    query = """
+        SELECT p.id as 'id',
+        p.name as 'name',
+        p.sku as 'sku'
+        from product as p;    
+    """
+    cursor.execute(query)
+    results = cursor.fetchall()
+    cursor.close()
+
+    return results
 
 def main():
     connection = mysql.connector.connect(**DB_CONFIG)

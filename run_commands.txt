@@ -1,5 +1,5 @@
-Start command: docker exec -it simulation-mysql mysql -u root -p
-
+Start command: 
+docker exec -it simulation-mysql mysql -u root -p
 
 powershell command to initilize 
 
@@ -14,3 +14,12 @@ Get-Content verifications.sql | docker exec -i simulation-mysql mysql -u root -p
 
 initilize the products
 Get-Content products_script.sql | docker exec -i simulation-mysql mysql -u root -pexample lola-blankets_db
+
+
+
+
+
+
+
+Executing the 003 migration:
+Get-Content database/migrations/002_add_shipment_tracking.sql | docker exec -i simulation-mysql mysql -u root -pexample lola-blanketsV2_db
