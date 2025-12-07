@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-452</PONumber>
+    <ShipmentDate>2025-11-21</ShipmentDate>
+    <ExpectedDeliveryDate>2025-11-25</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>Old Dominion</Name>
+      <TrackingNumber>TRK-2025-EQX241</TrackingNumber>
+      <BOLNumber>BOL-774229</BOLNumber>
+    </Carrier>
+    <TotalPallets>1</TotalPallets>
+    <TotalWeight unit="lbs">900</TotalWeight>
+    <SpecialInstructions>Deliver to Dock 3. Fragile - Handle with care.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1017-01</SKU>
+      <ProductDescription>Lola Silver Linings - Baby</ProductDescription>
+      <QuantityOrdered>180</QuantityOrdered>
+      <QuantityShipped>180</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>1</PalletsShipped>
+      <BlanketPerPallet>180</BlanketPerPallet>
+      <Notes>1 pallet, 18 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>1</TotalLines>
+    <TotalQuantity>180</TotalQuantity>
+    <TotalPallets>1</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

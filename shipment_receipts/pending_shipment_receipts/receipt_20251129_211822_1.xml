@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-156</PONumber>
+    <ShipmentDate>2025-11-30</ShipmentDate>
+    <ExpectedDeliveryDate>2025-12-07</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>UPS Freight</Name>
+      <TrackingNumber>TRK-2025-HKQ195</TrackingNumber>
+      <BOLNumber>BOL-980895</BOLNumber>
+    </Carrier>
+    <TotalPallets>16</TotalPallets>
+    <TotalWeight unit="lbs">9480</TotalWeight>
+    <SpecialInstructions>Deliver to Dock 3. Fragile - Handle with care.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1018-01</SKU>
+      <ProductDescription>Lola Navy Blue - Baby</ProductDescription>
+      <QuantityOrdered>720</QuantityOrdered>
+      <QuantityShipped>720</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>180</BlanketPerPallet>
+      <Notes>4 pallets, 72 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1015-03</SKU>
+      <ProductDescription>Lola Peaches &amp; Cream - Large</ProductDescription>
+      <QuantityOrdered>240</QuantityOrdered>
+      <QuantityShipped>240</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>5</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>5 pallets, 60 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1003-01</SKU>
+      <ProductDescription>Lola Creamy Cloud - Baby</ProductDescription>
+      <QuantityOrdered>720</QuantityOrdered>
+      <QuantityShipped>720</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>180</BlanketPerPallet>
+      <Notes>4 pallets, 72 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>4</LineNumber>
+      <SKU>302-1008-02</SKU>
+      <ProductDescription>Lola Midnight Marie - Medium</ProductDescription>
+      <QuantityOrdered>216</QuantityOrdered>
+      <QuantityShipped>216</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>72</BlanketPerPallet>
+      <Notes>3 pallets, 54 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>4</TotalLines>
+    <TotalQuantity>1896</TotalQuantity>
+    <TotalPallets>16</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

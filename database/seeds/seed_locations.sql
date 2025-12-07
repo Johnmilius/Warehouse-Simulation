@@ -14,7 +14,7 @@
 -- TOTAL: 4,966 locations
 -- =====================================================
 
-USE `lola-blankets_db`;
+USE `lola-blanketsV2_db`;
 
 -- =====================================================
 -- WAREHOUSE 1, SECTION A

@@ -1,5 +1,6 @@
 
 
+
 ISSUE 1 - Date 11/14/2025: The way orders are processed to be most effecient is to catagorize them into three sections. MIXED / SINGLES / WHOLESALES.
     - SINGLES: E.g. 100 people order the same single blanket. 
         The current System finds Locations, UNITS (new data column), that have bulk availible and then MARKS, (new data column introduced), creates a BATCH sheet so that the picker can grab from a small amount of locations to promote efficiency.
@@ -11,9 +12,6 @@ ISSUE 1 - Date 11/14/2025: The way orders are processed to be most effecient is 
 
 SOLUTION IN PROGRESS: Create a better Batch sheet Generation algorithm that takes MIXED batches better agregating. 
 HOW TO IMPLEMENT: Need to create new tables to handle batch sheets, Orders, and unit ids
-
-
-
 
 
 
@@ -40,5 +38,11 @@ ISSUE 2: Craeting the Process of handling incoming shipments. 11/22/2025
         Skills: XML file parsing, using python pathlib, understanding python module creation, 
         creating a more detailed psudeo code plan is important for both implementing a whole feature 
         but also for individual files and functions.
+
+        11/29/2025 - UPDATE
+        Sorting xml sheets by date formate YYYYMMDD_HHMMSS_#.xml to be able to sort by date in the grab funciotns to grab the oldest date and process that first if there is a backup log. 
+
+        12/3/2025: - UPDATE
+        Noticed duplication of code for sql insertions so made sql_utils.py for handling functions.
 
 

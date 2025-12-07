@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-389</PONumber>
+    <ShipmentDate>2025-11-24</ShipmentDate>
+    <ExpectedDeliveryDate>2025-12-01</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>Old Dominion</Name>
+      <TrackingNumber>TRK-2025-ZEB548</TrackingNumber>
+      <BOLNumber>BOL-804954</BOLNumber>
+    </Carrier>
+    <TotalPallets>17</TotalPallets>
+    <TotalWeight unit="lbs">4680</TotalWeight>
+    <SpecialInstructions>Inside delivery required.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1013-02</SKU>
+      <ProductDescription>Lola Mocha Check - Medium</ProductDescription>
+      <QuantityOrdered>144</QuantityOrdered>
+      <QuantityShipped>144</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>2</PalletsShipped>
+      <BlanketPerPallet>72</BlanketPerPallet>
+      <Notes>2 pallets, 36 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1012-03</SKU>
+      <ProductDescription>Lola Latte Check - Large</ProductDescription>
+      <QuantityOrdered>144</QuantityOrdered>
+      <QuantityShipped>144</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>3 pallets, 36 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1015-03</SKU>
+      <ProductDescription>Lola Peaches &amp; Cream - Large</ProductDescription>
+      <QuantityOrdered>240</QuantityOrdered>
+      <QuantityShipped>240</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>5</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>5 pallets, 60 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>4</LineNumber>
+      <SKU>302-1005-04</SKU>
+      <ProductDescription>Lola Smoky Skies - Extra Large</ProductDescription>
+      <QuantityOrdered>48</QuantityOrdered>
+      <QuantityShipped>48</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>2</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>2 pallets, 16 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>5</LineNumber>
+      <SKU>302-1006-02</SKU>
+      <ProductDescription>Lola Blush Pink - Medium</ProductDescription>
+      <QuantityOrdered>360</QuantityOrdered>
+      <QuantityShipped>360</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>5</PalletsShipped>
+      <BlanketPerPallet>72</BlanketPerPallet>
+      <Notes>5 pallets, 90 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>5</TotalLines>
+    <TotalQuantity>936</TotalQuantity>
+    <TotalPallets>17</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

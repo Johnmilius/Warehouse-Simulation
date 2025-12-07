@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-422</PONumber>
+    <ShipmentDate>2025-11-30</ShipmentDate>
+    <ExpectedDeliveryDate>2025-12-07</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>R+L Carriers</Name>
+      <TrackingNumber>TRK-2025-ROG662</TrackingNumber>
+      <BOLNumber>BOL-232862</BOLNumber>
+    </Carrier>
+    <TotalPallets>9</TotalPallets>
+    <TotalWeight unit="lbs">2160</TotalWeight>
+    <SpecialInstructions>Tailgate delivery.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1012-03</SKU>
+      <ProductDescription>Lola Latte Check - Large</ProductDescription>
+      <QuantityOrdered>144</QuantityOrdered>
+      <QuantityShipped>144</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>3 pallets, 36 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1014-04</SKU>
+      <ProductDescription>Lola Toasted Almond - Extra Large</ProductDescription>
+      <QuantityOrdered>72</QuantityOrdered>
+      <QuantityShipped>72</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>3 pallets, 24 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1017-02</SKU>
+      <ProductDescription>Lola Silver Linings - Medium</ProductDescription>
+      <QuantityOrdered>216</QuantityOrdered>
+      <QuantityShipped>216</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>72</BlanketPerPallet>
+      <Notes>3 pallets, 54 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>3</TotalLines>
+    <TotalQuantity>432</TotalQuantity>
+    <TotalPallets>9</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

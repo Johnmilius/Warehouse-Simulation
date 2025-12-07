@@ -1,0 +1,1 @@
+from .handle_shipment_receipt import process_reciept

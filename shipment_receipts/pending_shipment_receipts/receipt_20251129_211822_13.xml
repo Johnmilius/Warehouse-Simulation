@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-581</PONumber>
+    <ShipmentDate>2025-10-30</ShipmentDate>
+    <ExpectedDeliveryDate>2025-11-04</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>R+L Carriers</Name>
+      <TrackingNumber>TRK-2025-ZMC988</TrackingNumber>
+      <BOLNumber>BOL-345408</BOLNumber>
+    </Carrier>
+    <TotalPallets>14</TotalPallets>
+    <TotalWeight unit="lbs">2880</TotalWeight>
+    <SpecialInstructions>Deliver to Dock 3. Fragile - Handle with care.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1004-03</SKU>
+      <ProductDescription>Lola Desert Dune - Large</ProductDescription>
+      <QuantityOrdered>240</QuantityOrdered>
+      <QuantityShipped>240</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>5</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>5 pallets, 60 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1014-04</SKU>
+      <ProductDescription>Lola Toasted Almond - Extra Large</ProductDescription>
+      <QuantityOrdered>96</QuantityOrdered>
+      <QuantityShipped>96</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>4 pallets, 32 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1013-03</SKU>
+      <ProductDescription>Lola Mocha Check - Large</ProductDescription>
+      <QuantityOrdered>240</QuantityOrdered>
+      <QuantityShipped>240</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>5</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>5 pallets, 60 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>3</TotalLines>
+    <TotalQuantity>576</TotalQuantity>
+    <TotalPallets>14</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

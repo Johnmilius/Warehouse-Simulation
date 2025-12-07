@@ -43,10 +43,6 @@ def generate_inventory_count_warehouse_1(connection):
     return filled_locations
         
         
-        
-        
-        
-        
 def insert_many(tablename, data, connection):
     try:
         cursor = connection.cursor()
@@ -60,9 +56,6 @@ def insert_many(tablename, data, connection):
         connection.commit()
     except Error as e:
         print(f"Error inserting data: {e}")
-
-
-
 
 
 def get_all_empty_locations(connection):

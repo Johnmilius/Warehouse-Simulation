@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-501</PONumber>
+    <ShipmentDate>2025-11-10</ShipmentDate>
+    <ExpectedDeliveryDate>2025-11-15</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>UPS Freight</Name>
+      <TrackingNumber>TRK-2025-RQD304</TrackingNumber>
+      <BOLNumber>BOL-888857</BOLNumber>
+    </Carrier>
+    <TotalPallets>14</TotalPallets>
+    <TotalWeight unit="lbs">2760</TotalWeight>
+    <SpecialInstructions>Appointment required for delivery.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1019-03</SKU>
+      <ProductDescription>Lola Charcoal Grey - Large</ProductDescription>
+      <QuantityOrdered>240</QuantityOrdered>
+      <QuantityShipped>240</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>5</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>5 pallets, 60 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1018-04</SKU>
+      <ProductDescription>Lola Navy Blue - Extra Large</ProductDescription>
+      <QuantityOrdered>72</QuantityOrdered>
+      <QuantityShipped>72</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>3 pallets, 24 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1010-02</SKU>
+      <ProductDescription>Lola Rosewater - Medium</ProductDescription>
+      <QuantityOrdered>144</QuantityOrdered>
+      <QuantityShipped>144</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>2</PalletsShipped>
+      <BlanketPerPallet>72</BlanketPerPallet>
+      <Notes>2 pallets, 36 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>4</LineNumber>
+      <SKU>302-1001-04</SKU>
+      <ProductDescription>Lola Caramel N' Cream - Extra Large</ProductDescription>
+      <QuantityOrdered>96</QuantityOrdered>
+      <QuantityShipped>96</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>4 pallets, 32 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>4</TotalLines>
+    <TotalQuantity>552</TotalQuantity>
+    <TotalPallets>14</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

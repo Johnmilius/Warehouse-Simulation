@@ -9,8 +9,7 @@
 --              No Bays, No Levels
 -- =====================================================
 
-USE `lola-blankets_db`;
-
+USE `lola-blanketsV2_db`;
 -- Clear existing data (if re-running script)
 SET FOREIGN_KEY_CHECKS=0;
 TRUNCATE TABLE inventory_transaction;

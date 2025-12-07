@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-993</PONumber>
+    <ShipmentDate>2025-11-26</ShipmentDate>
+    <ExpectedDeliveryDate>2025-12-01</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>XYZ Freight Lines</Name>
+      <TrackingNumber>TRK-2025-SXV573</TrackingNumber>
+      <BOLNumber>BOL-177689</BOLNumber>
+    </Carrier>
+    <TotalPallets>12</TotalPallets>
+    <TotalWeight unit="lbs">5520</TotalWeight>
+    <SpecialInstructions>Check with warehouse manager upon arrival.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1019-01</SKU>
+      <ProductDescription>Lola Charcoal Grey - Baby</ProductDescription>
+      <QuantityOrdered>720</QuantityOrdered>
+      <QuantityShipped>720</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>180</BlanketPerPallet>
+      <Notes>4 pallets, 72 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1009-03</SKU>
+      <ProductDescription>Lola Rainy Day - Large</ProductDescription>
+      <QuantityOrdered>96</QuantityOrdered>
+      <QuantityShipped>96</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>2</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>2 pallets, 24 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1005-04</SKU>
+      <ProductDescription>Lola Smoky Skies - Extra Large</ProductDescription>
+      <QuantityOrdered>72</QuantityOrdered>
+      <QuantityShipped>72</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>3 pallets, 24 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>4</LineNumber>
+      <SKU>302-1002-02</SKU>
+      <ProductDescription>Lola Antique Ivory - Medium</ProductDescription>
+      <QuantityOrdered>216</QuantityOrdered>
+      <QuantityShipped>216</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>72</BlanketPerPallet>
+      <Notes>3 pallets, 54 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>4</TotalLines>
+    <TotalQuantity>1104</TotalQuantity>
+    <TotalPallets>12</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

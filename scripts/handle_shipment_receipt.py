@@ -4,9 +4,9 @@ sys.path.append(str(Path(__file__).parent.parent))
 from utils.xml_file_parsing import extract_shipment_receipt_data 
 
 import os
-from pathlib import Path
 import shutil
 from datetime import datetime 
+from natsort import natsorted
 
 
 def process_reciept():
@@ -19,24 +19,48 @@ def process_reciept():
     
     xml_files = list(pending_dir.glob("*.xml"))
     
+    # if no reciepts return
     if not xml_files:
         print("No Receipts to Process")
         return
-    
-    file = xml_files[0]
-    
-    print(f"Grabbed File {file} to proccess.")
+
+    xml_files_sorted = natsorted(xml_files)
+        
+    # Debug for sorted list
+    for file in xml_files_sorted:
+        print(f"Receipt File Name: {file.name}")
     
     try:
-        full_file_path = str(file)
+        full_file_path = str(xml_files_sorted[0])
         
         receipt_data = extract_shipment_receipt_data(full_file_path)
+        
+        # print(f"RECEIPT\n{receipt_data}\n")
+        
+        # move file to processed folcer
+        # shutil.move(str(file), str(processed_dir / file.name)) 
         print(receipt_data)
+        return receipt_data   
+
     except Exception as e:
         print(f"Error when parsing data from {full_file_path}: {e}")
-        
     
-        
+   
 
 
-process_reciept()
+
+
+    # handle all files
+    # for i, file in enumerate(xml_files_sorted):
+    #     try:
+    #         full_file_path = str(file)
+            
+    #         receipt_data = extract_shipment_receipt_data(full_file_path)
+            
+    #         print(f"RECEIPT {i}\n{receipt_data}\n")
+    #         # shutil.move(str(file), str(processed_dir / file.name))    
+
+    #     except Exception as e:
+    #         print(f"Error when parsing data from {full_file_path}: {e}")   
+    #once process move receipt to the file to the processed receipts.
+    # shutil.move(str(file), str(processed_dir / file.name))    

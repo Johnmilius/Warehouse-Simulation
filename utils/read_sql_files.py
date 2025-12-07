@@ -15,17 +15,45 @@ def read_and_execute_sql_file(filepath, connection):
         
        
     try: 
-        # connects to the line
         cursor = connection.cursor()
         
-        # executes the code
-        cursor.execute(sql_content)
+        # Remove comments and split by semicolons
+        lines = sql_content.split('\n')
+        cleaned_lines = []
+        for line in lines:
+            # Remove single-line comments
+            if '--' in line:
+                line = line[:line.index('--')]
+            if line.strip():
+                cleaned_lines.append(line)
+        
+        cleaned_content = '\n'.join(cleaned_lines)
+        
+        # Split by semicolon to get individual statements
+        statements = [stmt.strip() for stmt in cleaned_content.split(';') if stmt.strip()]
+        
+        # Execute each statement separately
+        for i, statement in enumerate(statements):
+            try:
+                cursor.execute(statement)
+                # If the statement returns results, fetch them to clear the buffer
+                if cursor.with_rows:
+                    cursor.fetchall()
+            except Exception as stmt_error:
+                print(f"Error on statement {i+1}: {stmt_error}")
+                print(f"Statement: {statement[:200]}...")
+                raise
+        
         connection.commit()
         
         # debug statement
-        print(f"SQL file {filepath} executed succesfully.")
+        print(f"SQL file {filepath} executed successfully ({len(statements)} statements).")
         return True
     except Exception as e:
-        print(f"SQL file had error being read: {e}") ## finish this function
+        print(f"SQL file had error being executed: {e}")
+        connection.rollback()
         return False
+    finally:
+        if cursor:
+            cursor.close()
     

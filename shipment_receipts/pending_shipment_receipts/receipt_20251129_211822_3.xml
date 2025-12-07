@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-223</PONumber>
+    <ShipmentDate>2025-11-09</ShipmentDate>
+    <ExpectedDeliveryDate>2025-11-13</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>R+L Carriers</Name>
+      <TrackingNumber>TRK-2025-PTP172</TrackingNumber>
+      <BOLNumber>BOL-542655</BOLNumber>
+    </Carrier>
+    <TotalPallets>7</TotalPallets>
+    <TotalWeight unit="lbs">1620</TotalWeight>
+    <SpecialInstructions>Inside delivery required.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1008-04</SKU>
+      <ProductDescription>Lola Midnight Marie - Extra Large</ProductDescription>
+      <QuantityOrdered>24</QuantityOrdered>
+      <QuantityShipped>24</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>1</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>1 pallet, 8 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1004-01</SKU>
+      <ProductDescription>Lola Desert Dune - Baby</ProductDescription>
+      <QuantityOrdered>180</QuantityOrdered>
+      <QuantityShipped>180</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>1</PalletsShipped>
+      <BlanketPerPallet>180</BlanketPerPallet>
+      <Notes>1 pallet, 18 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1005-04</SKU>
+      <ProductDescription>Lola Smoky Skies - Extra Large</ProductDescription>
+      <QuantityOrdered>120</QuantityOrdered>
+      <QuantityShipped>120</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>5</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>5 pallets, 40 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>3</TotalLines>
+    <TotalQuantity>324</TotalQuantity>
+    <TotalPallets>7</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

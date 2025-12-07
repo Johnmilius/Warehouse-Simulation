@@ -7,8 +7,7 @@
 -- Prices: Baby $109, Medium $249, Large $299, XL $399
 -- =====================================================
 
-USE `lola-blankets_db`;
-
+USE `lola-blanketsV2_db`;
 -- Clear existing products if re-running
 SET FOREIGN_KEY_CHECKS=0;
 TRUNCATE TABLE inventory_transaction;

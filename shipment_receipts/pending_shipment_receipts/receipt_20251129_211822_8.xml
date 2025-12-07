@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-561</PONumber>
+    <ShipmentDate>2025-11-18</ShipmentDate>
+    <ExpectedDeliveryDate>2025-11-20</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>XYZ Freight Lines</Name>
+      <TrackingNumber>TRK-2025-PQL794</TrackingNumber>
+      <BOLNumber>BOL-642134</BOLNumber>
+    </Carrier>
+    <TotalPallets>7</TotalPallets>
+    <TotalWeight unit="lbs">840</TotalWeight>
+    <SpecialInstructions>Call 30 minutes before arrival.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1009-04</SKU>
+      <ProductDescription>Lola Rainy Day - Extra Large</ProductDescription>
+      <QuantityOrdered>96</QuantityOrdered>
+      <QuantityShipped>96</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>4 pallets, 32 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1017-04</SKU>
+      <ProductDescription>Lola Silver Linings - Extra Large</ProductDescription>
+      <QuantityOrdered>24</QuantityOrdered>
+      <QuantityShipped>24</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>1</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>1 pallet, 8 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1010-04</SKU>
+      <ProductDescription>Lola Rosewater - Extra Large</ProductDescription>
+      <QuantityOrdered>48</QuantityOrdered>
+      <QuantityShipped>48</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>2</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>2 pallets, 16 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>3</TotalLines>
+    <TotalQuantity>168</TotalQuantity>
+    <TotalPallets>7</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

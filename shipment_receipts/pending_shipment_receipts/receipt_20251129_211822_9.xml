@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-590</PONumber>
+    <ShipmentDate>2025-12-05</ShipmentDate>
+    <ExpectedDeliveryDate>2025-12-12</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>Estes Express</Name>
+      <TrackingNumber>TRK-2025-FPD227</TrackingNumber>
+      <BOLNumber>BOL-124927</BOLNumber>
+    </Carrier>
+    <TotalPallets>7</TotalPallets>
+    <TotalWeight unit="lbs">1680</TotalWeight>
+    <SpecialInstructions>Check with warehouse manager upon arrival.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1010-03</SKU>
+      <ProductDescription>Lola Rosewater - Large</ProductDescription>
+      <QuantityOrdered>192</QuantityOrdered>
+      <QuantityShipped>192</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>4 pallets, 48 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1003-03</SKU>
+      <ProductDescription>Lola Creamy Cloud - Large</ProductDescription>
+      <QuantityOrdered>144</QuantityOrdered>
+      <QuantityShipped>144</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>3 pallets, 36 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>2</TotalLines>
+    <TotalQuantity>336</TotalQuantity>
+    <TotalPallets>7</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

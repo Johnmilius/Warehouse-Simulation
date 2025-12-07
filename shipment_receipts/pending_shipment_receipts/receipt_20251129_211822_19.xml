@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-801</PONumber>
+    <ShipmentDate>2025-11-08</ShipmentDate>
+    <ExpectedDeliveryDate>2025-11-13</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>UPS Freight</Name>
+      <TrackingNumber>TRK-2025-ARO153</TrackingNumber>
+      <BOLNumber>BOL-105997</BOLNumber>
+    </Carrier>
+    <TotalPallets>13</TotalPallets>
+    <TotalWeight unit="lbs">3600</TotalWeight>
+    <SpecialInstructions>Inside delivery required.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1017-03</SKU>
+      <ProductDescription>Lola Silver Linings - Large</ProductDescription>
+      <QuantityOrdered>240</QuantityOrdered>
+      <QuantityShipped>240</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>5</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>5 pallets, 60 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1007-02</SKU>
+      <ProductDescription>Lola Malibu Blue - Medium</ProductDescription>
+      <QuantityOrdered>288</QuantityOrdered>
+      <QuantityShipped>288</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>72</BlanketPerPallet>
+      <Notes>4 pallets, 72 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>3</LineNumber>
+      <SKU>302-1012-03</SKU>
+      <ProductDescription>Lola Latte Check - Large</ProductDescription>
+      <QuantityOrdered>48</QuantityOrdered>
+      <QuantityShipped>48</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>1</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>1 pallet, 12 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>4</LineNumber>
+      <SKU>302-1003-03</SKU>
+      <ProductDescription>Lola Creamy Cloud - Large</ProductDescription>
+      <QuantityOrdered>144</QuantityOrdered>
+      <QuantityShipped>144</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>3 pallets, 36 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>4</TotalLines>
+    <TotalQuantity>720</TotalQuantity>
+    <TotalPallets>13</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

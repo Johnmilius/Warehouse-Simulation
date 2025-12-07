@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-211</PONumber>
+    <ShipmentDate>2025-11-30</ShipmentDate>
+    <ExpectedDeliveryDate>2025-12-05</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>UPS Freight</Name>
+      <TrackingNumber>TRK-2025-UAX903</TrackingNumber>
+      <BOLNumber>BOL-366869</BOLNumber>
+    </Carrier>
+    <TotalPallets>4</TotalPallets>
+    <TotalWeight unit="lbs">2040</TotalWeight>
+    <SpecialInstructions>Call 30 minutes before arrival.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1019-01</SKU>
+      <ProductDescription>Lola Charcoal Grey - Baby</ProductDescription>
+      <QuantityOrdered>360</QuantityOrdered>
+      <QuantityShipped>360</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>2</PalletsShipped>
+      <BlanketPerPallet>180</BlanketPerPallet>
+      <Notes>2 pallets, 36 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1003-04</SKU>
+      <ProductDescription>Lola Creamy Cloud - Extra Large</ProductDescription>
+      <QuantityOrdered>48</QuantityOrdered>
+      <QuantityShipped>48</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>2</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>2 pallets, 16 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>2</TotalLines>
+    <TotalQuantity>408</TotalQuantity>
+    <TotalPallets>4</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

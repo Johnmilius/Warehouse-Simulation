@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-180</PONumber>
+    <ShipmentDate>2025-11-09</ShipmentDate>
+    <ExpectedDeliveryDate>2025-11-12</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>Estes Express</Name>
+      <TrackingNumber>TRK-2025-LUJ587</TrackingNumber>
+      <BOLNumber>BOL-700601</BOLNumber>
+    </Carrier>
+    <TotalPallets>5</TotalPallets>
+    <TotalWeight unit="lbs">2520</TotalWeight>
+    <SpecialInstructions>Deliver to receiving area. No appointment needed.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1003-03</SKU>
+      <ProductDescription>Lola Creamy Cloud - Large</ProductDescription>
+      <QuantityOrdered>144</QuantityOrdered>
+      <QuantityShipped>144</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>48</BlanketPerPallet>
+      <Notes>3 pallets, 36 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1018-01</SKU>
+      <ProductDescription>Lola Navy Blue - Baby</ProductDescription>
+      <QuantityOrdered>360</QuantityOrdered>
+      <QuantityShipped>360</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>2</PalletsShipped>
+      <BlanketPerPallet>180</BlanketPerPallet>
+      <Notes>2 pallets, 36 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>2</TotalLines>
+    <TotalQuantity>504</TotalQuantity>
+    <TotalPallets>5</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>

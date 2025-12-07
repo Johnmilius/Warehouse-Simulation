@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvanceShipNotice>
+  <Header>
+    <PONumber>PO-2025-225</PONumber>
+    <ShipmentDate>2025-11-05</ShipmentDate>
+    <ExpectedDeliveryDate>2025-11-10</ExpectedDeliveryDate>
+    <Supplier>
+      <Name>Lola Blankets Manufacturing</Name>
+      <ContactEmail>shipping@lolablankets.com</ContactEmail>
+      <ContactPhone>555-0100</ContactPhone>
+    </Supplier>
+    <Carrier>
+      <Name>FedEx Freight</Name>
+      <TrackingNumber>TRK-2025-QHP588</TrackingNumber>
+      <BOLNumber>BOL-649333</BOLNumber>
+    </Carrier>
+    <TotalPallets>7</TotalPallets>
+    <TotalWeight unit="lbs">1560</TotalWeight>
+    <SpecialInstructions>Deliver to receiving area. No appointment needed.</SpecialInstructions>
+  </Header>
+  <LineItems>
+    <LineItem>
+      <LineNumber>1</LineNumber>
+      <SKU>302-1005-02</SKU>
+      <ProductDescription>Lola Smoky Skies - Medium</ProductDescription>
+      <QuantityOrdered>216</QuantityOrdered>
+      <QuantityShipped>216</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>3</PalletsShipped>
+      <BlanketPerPallet>72</BlanketPerPallet>
+      <Notes>3 pallets, 54 boxes</Notes>
+    </LineItem>
+    <LineItem>
+      <LineNumber>2</LineNumber>
+      <SKU>302-1001-04</SKU>
+      <ProductDescription>Lola Caramel N' Cream - Extra Large</ProductDescription>
+      <QuantityOrdered>96</QuantityOrdered>
+      <QuantityShipped>96</QuantityShipped>
+      <UnitOfMeasure>blankets</UnitOfMeasure>
+      <PalletsShipped>4</PalletsShipped>
+      <BlanketPerPallet>24</BlanketPerPallet>
+      <Notes>4 pallets, 32 boxes</Notes>
+    </LineItem>
+  </LineItems>
+  <Summary>
+    <TotalLines>2</TotalLines>
+    <TotalQuantity>312</TotalQuantity>
+    <TotalPallets>7</TotalPallets>
+  </Summary>
+</AdvanceShipNotice>
