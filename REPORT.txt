@@ -45,4 +45,11 @@ ISSUE 2: Craeting the Process of handling incoming shipments. 11/22/2025
         12/3/2025: - UPDATE
         Noticed duplication of code for sql insertions so made sql_utils.py for handling functions.
 
+        12/17/2025: - UPDATE ISSUE
+        When inserting xml receipts into the database, since this is more of a simualtion and I don't have user interaction with actual shipments we can not check to see if we actually received the amount of items for the shipments.
+        Solution for now is to write a TODO / Backlog item to incorperate this later on when working on server client intergration for hand held devcices for workers for them to check off or enter shipment issues.
+
+        12/17/2025: - TODO
+        Need to update try and catching in all aspects of code to bubble up instead of catching an error and returning None to caller function.
+
 

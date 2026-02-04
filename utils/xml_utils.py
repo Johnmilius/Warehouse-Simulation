@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 from datetime import datetime
 
+
 def xml_file_parsing(filepath):
     try: 
         root = ET.parse(filepath).getroot()
@@ -9,8 +10,9 @@ def xml_file_parsing(filepath):
         return None
     return root
 
+
 def extract_shipment_receipt_data(filepath):
-        
+    
     root = xml_file_parsing(filepath)
     
     if root is None:  
@@ -21,11 +23,12 @@ def extract_shipment_receipt_data(filepath):
         print("There is no Header in Receipt")
         return None
 
-    #debug statement
+    # debug statement
+    print()
     print(f"Parsing Receipt: {filepath}")
-
-
-    #Grab shipment data
+    print()
+    
+    # Grab shipment data
     shipment_receipt_data = {
     'po_number': header.find("PONumber").text,
     'shipment_date': datetime.strptime(header.find("ShipmentDate").text, "%Y-%m-%d"),
@@ -37,25 +40,22 @@ def extract_shipment_receipt_data(filepath):
     'notes': header.find("SpecialInstructions").text
     }
     
-
-    
     shipment_receipt_items_data = []
-    shipment_receipt_items_data = []
-
     
     lineitems = root.find("LineItems")
     if lineitems is None:
         print("There are no Items in this receipt")
         return None
 
-    #debug lineitems
+    # debug lineitems
     # print(lineitems)
     
-    #Grab Data for items
+    # Grab Data for items
     for item in lineitems.findall("LineItem"):
         item_data = {
         'sku': item.find("SKU").text,
         'quantity_expected': int(item.find("QuantityOrdered").text),
+        'quantity_received': int(item.find("QuantityShipped").text), # !!! FALSE DATA JUST TEMPORARY HARD CODE
         'quantity_shipped':  int(item.find("QuantityShipped").text),
         'pallets_expected':  int(item.find("PalletsShipped").text),
         'pallets_received':  int(item.find("PalletsShipped").text),
@@ -72,7 +72,10 @@ def extract_shipment_receipt_data(filepath):
     shipment_receipt_data["shipment_items"] = shipment_receipt_items_data
 
     # Debug: Print complete shipment receipt data
-    print("\n=== SHIPMENT RECEIPT DATA ===")
+    print()
+    print("Parsed Receipt With Data")
+    print()
+    print("=== SHIPMENT RECEIPT DATA ===")
     for key, value in shipment_receipt_data.items():
         if key != "shipment_items":
             print(f"{key}: {value}")
@@ -87,6 +90,5 @@ def extract_shipment_receipt_data(filepath):
         for field, val in item.items():
             print(f"  {field}: {val}")
         print("-" * 20)
-
     return shipment_receipt_data
     

@@ -15,8 +15,8 @@ def get_db_connection(config = None):
     except Exception as e:
         print(f"Error trying to connect to MySQL: {e}")
         print(f"Config: {cfg}")
-        return None
-    
+        raise
+        
 def sql_query_statement(connection, query, data=None, fetchall=False, fetchone=False):
    
     try:
@@ -34,7 +34,7 @@ def sql_query_statement(connection, query, data=None, fetchall=False, fetchone=F
     
     except Exception as e:
         print(f"Error: {e}\nWith Executing Query:\n{query}\nWith Data: {data}")
-        
+        raise
     finally:
         if cursor:
             cursor.close()
@@ -53,6 +53,7 @@ def sql_insert_statement(connection, insert, data, execute_many=False):
     
     except Exception as e:
         print(f"Error: {e}\nInserting:\n{insert}\nWith data:\n{data}")
+        raise
         
     finally:
         if cursor:

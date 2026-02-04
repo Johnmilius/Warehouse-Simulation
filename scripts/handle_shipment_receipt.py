@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
-from utils.xml_file_parsing import extract_shipment_receipt_data 
+from utils.xml_utils import extract_shipment_receipt_data 
 
 import os
 import shutil
@@ -27,19 +27,21 @@ def process_reciept():
     xml_files_sorted = natsorted(xml_files)
         
     # Debug for sorted list
-    for file in xml_files_sorted:
-        print(f"Receipt File Name: {file.name}")
+    # for file in xml_files_sorted:
+    #     print(f"Receipt File Name: {file.name}")
     
     try:
-        full_file_path = str(xml_files_sorted[0])
+        full_file_path = xml_files_sorted[0]
         
         receipt_data = extract_shipment_receipt_data(full_file_path)
         
-        # print(f"RECEIPT\n{receipt_data}\n")
+        print()
+        print(f"RECEIPT\n{receipt_data}\n")
+        print()
         
-        # move file to processed folcer
-        # shutil.move(str(file), str(processed_dir / file.name)) 
-        print(receipt_data)
+        # move file to processed folder
+        shutil.move(full_file_path, processed_dir / full_file_path.name) 
+        
         return receipt_data   
 
     except Exception as e:

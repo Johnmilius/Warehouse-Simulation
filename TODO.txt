@@ -1,91 +1,12 @@
-NEXT RECREATE FILL INVENTORY SCRIPT
+Backlog
+
+- update catch error to bubble up.
 
 
-Work on Product Transactions table. 
+- Fix ability to add shipment received quantities to be accurate data using user hand held devices.  SEE shipment_insert_inventory.py line 83
 
-
-
-
-inventory_units table:
-- unit_id (primary key, like "145435" from your batch sheet)
-- fk_product_id (which product is on this pallet)
-- fk_location_id (where is this unit located)
-- quantity_total (total blankets on this pallet)
-- quantity_marked (reserved for orders)
-- quantity_available (calculated: total - marked)
-- date_received
-- status (active, picked, moved, etc.)
-
-
--- You could create a VIEW
-CREATE VIEW product_location_summary AS
-SELECT 
-    fk_location_id,
-    fk_product_id,
-    SUM(quantity_total) as quantity,
-    SUM(quantity_marked) as quantity_marked,
-    SUM(quantity_available) as quantity_available
-FROM inventory_units
-GROUP BY fk_location_id, fk_product_id;
-```
-
----
-
-## Which Approach Makes Sense?
-
-Think about these questions:
-
-**1. Can multiple pallets of the same product be at the same location?**
-- Example: Location A has 2 pallets of Caramel Baby, Unit 145435 and Unit 145436?
-
-**2. When you mark inventory, do you mark specific units?**
-- "Mark 50 blankets from Unit 145435"
-- Or just "Mark 50 blankets from Location A" (system picks which unit)?
-
-**3. When you move pallets, do you move entire units?**
-- "Move Unit 145435 from Location A to Location B"
-- This is easier if units are tracked separately
-
----
-
-## My Recommendation: **Approach B**
-
-Create `inventory_units` table because:
-- ✓ Matches real-world (each physical pallet has a unit ID)
-- ✓ Easier to track marking per pallet
-- ✓ Easier to move pallets between locations
-- ✓ Better for your picking optimization (know which specific units to pick from)
-
----
-
-## Updated Database Structure:
-
-### **New Tables Needed:**
-
-**1. `inventory_units`** (the pallets)
-```
-unit_id, fk_product_id, fk_location_id, 
-quantity_total, quantity_marked, date_received
-```
-
-**2. `orders`**
-```
-order_id, order_date, order_status, customer_id(optional)
-```
-
-**3. `order_items`**
-```
-order_item_id, fk_order_id, fk_product_id, 
-quantity_ordered, quantity_picked
-```
-
-**4. `batch_sheets`** (your pick waves)
-```
-batch_id, batch_date, batch_type (SINGLES/MIXED), 
-status (pending/in_progress/completed)
-```
-
-**5. `batch_items`** (individual picks in a batch)
-```
-batch_item_id, fk_batch_id, fk_order_item_id, 
-fk_unit_id, quantity_to_pick
+- Better process in general
+- common try catch practices
+- using data science practices to anaylyze the data.
+- learn linux scripts to learn how to automate process and file calls.
+- 

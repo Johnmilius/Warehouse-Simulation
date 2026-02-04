@@ -13,97 +13,116 @@ from config import DB_CONFIG
 
 
 def handle_receipt_db_insert():
-    
+    """
+    Takes a file path to a xml receipt to process.
+    1. Calls util xml_file_parsing.py to parse data from the xml file.
+    2. Creates sql insert statements and data tuples for shipment receipt.
+        prints data into console
+    3. inserts the shipment receipt data into the database.
+    4. Grabs the id for that insert for the fk for shipment items.
+    5. loops through all line items in the shipment and creates insert staemetns and dat tuples for them and executes them on at a time. 
+        prints each item into the console
+    6. ENDS
+    """    
+  
     receipt_data = process_reciept()
     if receipt_data is None:
         print("Receipt data does not exist.")
         return None
         
     try: 
-        connection = mysql.connector.connect(**DB_CONFIG)
-            
-        shipment_receipt_insert_statement = """
-        INSERT INTO shipment_receipt (
-        po_number,
-        shipment_date,
-        expected_date,
-        received_date,
-        status,
-        supplier_name,
-        carrier,
-        tracking_number,
-        total_pallets,
-        notes,
-        created_date)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
-        """
-        
-        shipment_receipt_tuple = (
-        receipt_data['po_number'],
-        receipt_data['shipment_date'],
-        receipt_data['expected_date'],
-        datetime.now(), # Received Date
-        "RECEIVED", # Status
-        receipt_data['supplier_name'],
-        receipt_data['carrier'],
-        receipt_data['tracking_number'],
-        int(receipt_data['total_pallets']),
-        receipt_data['notes'],
-        datetime.now() # Create_date
-        )
-        
-        shipment_receipt_lastrowid = sql_insert_statement(connection=connection,
-                                                        insert=shipment_receipt_insert_statement,
-                                                        data=shipment_receipt_tuple)
-            
-        shipment_receipt_item_insert_statement = """
-        INSERT INTO shipment_receipt_item (
-        fk_shipment_receipt,
-        fk_product,
-        quantity_expected,
-        quantity_received,
-        pallets_expected,
-        pallets_received,
-        status,
-        notes,
-        received_date
-        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);
-        """
-        
-        for item in receipt_data['shipment_items']:
-        
-            query_product_id = "SELECT id from product WHERE sku = %s"
-            fk_product = sql_query_statement(connection=connection,
-                                                query=query_product_id, 
-                                                data=(item['sku'],),
-                                                fetchone=True)
-            
-            print(f"\n\n\n{fk_product}\n\n\n")
-            
-            # shipment quantity logic 
-            if  item['quantity_received'] < item['quantity_expected']:
-              shipment_item_status = 'SHORT'
-            elif item['quantity_received'] > item['quantity_expected']:
-              shipment_item_status = 'OVER'
-            else:
-              shipment_item_status = 'RECEIVED'
-            
-            shipment_receipt_item_tuple = (
-            shipment_receipt_lastrowid,
-            fk_product[0],
-            item['quantity_expected'],
-            item['quantity_received'],
-            item['pallets_expected'],
-            item['pallets_received'],
-            shipment_item_status,
-            item['notes'],
-            datetime.now(), # date_received.
-            )
-                
-            sql_insert_statement(connection=connection,
-                                insert=shipment_receipt_item_insert_statement, 
-                                data=shipment_receipt_item_tuple)
-            
+      connection = mysql.connector.connect(**DB_CONFIG)
+          
+      shipment_receipt_insert_statement = """
+      INSERT INTO shipment_receipt (
+      po_number,
+      shipment_date,
+      expected_date,
+      received_date,
+      status,
+      supplier_name,
+      carrier,
+      tracking_number,
+      total_pallets,
+      notes,
+      created_date)
+      VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+      """
+      
+      shipment_receipt_tuple = (
+      receipt_data['po_number'],
+      receipt_data['shipment_date'],
+      receipt_data['expected_date'],
+      datetime.now(), # Received Date
+      "RECEIVED", # Status
+      receipt_data['supplier_name'],
+      receipt_data['carrier'],
+      receipt_data['tracking_number'],
+      int(receipt_data['total_pallets']),
+      receipt_data['notes'],
+      datetime.now() # Create_date
+      )
+      
+      shipment_receipt_lastrowid = sql_insert_statement(connection=connection,
+                                                      insert=shipment_receipt_insert_statement,
+                                                      data=shipment_receipt_tuple)
+          
+      shipment_receipt_item_insert_statement = """
+      INSERT INTO shipment_receipt_item (
+      fk_shipment_receipt,
+      fk_product,
+      quantity_expected,
+      quantity_received,
+      pallets_expected,
+      pallets_received,
+      status,
+      notes,
+      received_date
+      ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);
+      """
+      
+      for item in receipt_data['shipment_items']:
+      
+          query_product_id = "SELECT id from product WHERE sku = %s"
+          fk_product = sql_query_statement(connection=connection,
+                                              query=query_product_id, 
+                                              data=(item['sku'],),
+                                              fetchone=True)
+          
+          # shipment quantity logic TODO Future feature. FOR NOW ALL SHIPMENTS ARE PROVED AS ACCURATE.
+          if  item['quantity_received'] < item['quantity_expected']:
+            shipment_item_status = 'SHORT'
+          elif item['quantity_received'] > item['quantity_expected']:
+            shipment_item_status = 'OVER'
+          else:
+            shipment_item_status = 'RECEIVED'
+          
+          shipment_receipt_item_tuple = (
+          shipment_receipt_lastrowid,
+          fk_product[0],
+          item['quantity_expected'],
+          item['quantity_received'], # currently fake data
+          item['pallets_expected'],
+          item['pallets_received'], # currently fake data
+          shipment_item_status, 
+          item['notes'],
+          datetime.now(), # date_received.
+          )
+              
+          sql_insert_statement(connection=connection,
+                              insert=shipment_receipt_item_insert_statement, 
+                              data=shipment_receipt_item_tuple)
+          
+      print()
+      print("Success inserting Shipment Receipt into the database")
+      print()
+      
+    except mysql.connector.IntegrityError as e:
+      print(f"Error trying to insert {receipt_data} into the database. Most Likely already been process: {e}")
+
+    except Exception as e:
+      print(f"Error Trying to insert Shipment Receipt data {receipt_data} into the Database: {e}")
+      
     finally:   
         connection.close()
 
